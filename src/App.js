@@ -6,6 +6,7 @@ function App() {
   const [applePayCapabilities, setApplePayCapabilities] = useState('');
   const [canMakePayments, setCanMakePayments] = useState('');
   const [canMakePaymentsWithActiveCard, setCanMakePaymentsWithActiveCard] = useState('');
+  const [option, setOption] = useState('');
 
   const updateInfor = () => {
     _applePayCapabilities();
@@ -15,7 +16,7 @@ function App() {
 
   const _applePayCapabilities = async () => {
     try {
-      const _applePayCapabilities = await window.ApplePaySession.applePayCapabilities();
+      const _applePayCapabilities = await window.ApplePaySession.applePayCapabilities(option);
       setApplePayCapabilities(_applePayCapabilities);
     } catch (error) {
       setApplePayCapabilities(error);
@@ -24,7 +25,7 @@ function App() {
 
   const _canMakePayments = async () => {
     try {
-      const _canMakePayments = await window.ApplePaySession.canMakePayments();
+      const _canMakePayments = await window.ApplePaySession.canMakePayments(option);
       setCanMakePayments(_canMakePayments);
     } catch (error) {
       setCanMakePayments(error);
@@ -34,7 +35,7 @@ function App() {
 
   const _canMakePaymentsWithActiveCard = async () => {
     try {
-      const _canMakePaymentsWithActiveCard = await window.ApplePaySession.canMakePaymentsWithActiveCard();
+      const _canMakePaymentsWithActiveCard = await window.ApplePaySession.canMakePaymentsWithActiveCard(option);
       setCanMakePaymentsWithActiveCard(_canMakePaymentsWithActiveCard);
     } catch (error) {
       setCanMakePaymentsWithActiveCard(error);
