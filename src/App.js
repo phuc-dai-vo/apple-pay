@@ -20,8 +20,10 @@ function App() {
         const _applePayCapabilities = await window.ApplePaySession.applePayCapabilities(option);
         setApplePayCapabilities(_applePayCapabilities);
       } catch (error) {
-        setApplePayCapabilities(error);
+        setApplePayCapabilities('ERROR');
       }
+    } else {
+      setApplePayCapabilities('NA - ApplePaySession.applePayCapabilities');
     }
   }
 
@@ -31,8 +33,10 @@ function App() {
         const _canMakePayments = await window.ApplePaySession.canMakePayments(option);
         setCanMakePayments(_canMakePayments);
       } catch (error) {
-        setCanMakePayments(error);
+        setCanMakePayments('ERROR');
       }
+    } else {
+      setApplePayCapabilities('NA - ApplePaySession.canMakePayments');
     }
   }
 
@@ -42,8 +46,10 @@ function App() {
         const _canMakePaymentsWithActiveCard = await window.ApplePaySession.canMakePaymentsWithActiveCard(option);
         setCanMakePaymentsWithActiveCard(_canMakePaymentsWithActiveCard);
       } catch (error) {
-        setCanMakePaymentsWithActiveCard(error);
+        setCanMakePaymentsWithActiveCard('ERROR');
       }
+    } else {
+      setApplePayCapabilities('NA - ApplePaySession.canMakePaymentsWithActiveCard');
     }
   }
 
@@ -75,12 +81,12 @@ function App() {
                   <tbody>
                     <tr>
                       <th scope="row">1</th>
-                      <td>ApplePaySession.applePayCapabilities</td>
+                      <td>applePayCapabilities</td>
                       <td>{applePayCapabilities || 'NA'}</td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
-                      <td>ApplePaySession.canMakePayments</td>
+                      <td>canMakePayments</td>
                       <td>{canMakePayments || 'NA'}</td>
                     </tr>
                     <tr>
