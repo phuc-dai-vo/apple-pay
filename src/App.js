@@ -82,17 +82,17 @@ function App() {
                     <tr>
                       <th scope="row">1</th>
                       <td>applePayCapabilities</td>
-                      <td>{applePayCapabilities || 'NA'}</td>
+                      <td>{applePayCapabilities}</td>
                     </tr>
                     <tr>
                       <th scope="row">2</th>
                       <td>canMakePayments</td>
-                      <td>{canMakePayments || 'NA'}</td>
+                      <td>{canMakePayments}</td>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
                       <td>canMakePaymentsWithActiveCard <span class="badge bg-danger">Deprecated</span> </td>
-                      <td>{canMakePaymentsWithActiveCard || 'NA'}</td>
+                      <td>{canMakePaymentsWithActiveCard}</td>
                     </tr>
                   </tbody>
                 </table>
