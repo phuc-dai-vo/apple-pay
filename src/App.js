@@ -27,10 +27,10 @@ function App() {
     }
   }
 
-  const _canMakePayments = async () => {
+  const _canMakePayments = () => {
     if (window.ApplePaySession.canMakePayments) {
       try {
-        const _canMakePayments = await window.ApplePaySession.canMakePayments(option);
+        const _canMakePayments = window.ApplePaySession.canMakePayments(option);
         setCanMakePayments(_canMakePayments);
       } catch (error) {
         setCanMakePayments('ERROR');
