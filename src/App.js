@@ -31,7 +31,7 @@ function App() {
     if (window.ApplePaySession.canMakePayments) {
       try {
         const _canMakePayments = window.ApplePaySession.canMakePayments(option);
-        setCanMakePayments(_canMakePayments);
+        setCanMakePayments(_canMakePayments ? 'TRUE' : 'FALSE');
       } catch (error) {
         setCanMakePayments('ERROR');
       }
