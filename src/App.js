@@ -36,7 +36,7 @@ function App() {
         setCanMakePayments('ERROR');
       }
     } else {
-      setApplePayCapabilities('NA - ApplePaySession.canMakePayments');
+      setCanMakePayments('NA - ApplePaySession.canMakePayments');
     }
   }
 
@@ -49,7 +49,7 @@ function App() {
         setCanMakePaymentsWithActiveCard('ERROR');
       }
     } else {
-      setApplePayCapabilities('NA - ApplePaySession.canMakePaymentsWithActiveCard');
+      setCanMakePaymentsWithActiveCard('NA - ApplePaySession.canMakePaymentsWithActiveCard');
     }
   }
 
